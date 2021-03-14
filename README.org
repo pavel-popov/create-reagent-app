@@ -1,5 +1,7 @@
 #+TITLE: Create shadow-cljs app with Reagent and Tailwind
 
+*DOESN'T WORK YET!*
+
 This is an opinionated template for [[https://github.com/seancorfield/clj-new][clj-new]] project generator
 that includes ClojureScript, Reagent and Tailwind.
 
@@ -7,3 +9,23 @@ Inspired by:
 
 - Thomas Mattacchione's [[https://github.com/athomasoriginal/create-reagent-app][create-reagent-app]] template that uses Figwheel
 - Mike Zamansky's template
+
+Includes:
+
+- ClojureScript
+- Shadow CLJS
+- Tailwind 2
+- Reagent
+
+Assumptions:
+- Org mode for documentation
+
+* How to use it
+
+
+#+begin_src sh :result verbatim
+clj -Sdeps '{:deps {seancorfield/clj-new {:mvn/version "1.1.264"}}}' \
+  -X clj-new/create \
+  :template '"https://github.com/pavel-popov/create-reagent-app@v0.0.1"' \
+  :name pp/game2048
+#+end_src

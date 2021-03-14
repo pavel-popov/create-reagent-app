@@ -17,11 +17,11 @@
      (println "Generating your reagent app: " (cnt/project-name name))
      (cnt/->files data
                   ["deps.edn"                       (render "deps.edn" data)]
-                  ["README.md"                      (render "README.md" data)]
+                  ["README.md"                      (render "README.org" data)]
                   [".gitignore"                     (render ".gitignore")]
                   ["dev.cljs.edn"                   (render "dev.cljs.edn" data)]
                   ["prod.cljs.edn"                  (render "prod.cljs.edn" data)]
-                  ["src/{{nested-dirs}}.cljs"       (render "core.cljs" data)]
-                  ["test/{{nested-dirs}}_test.cljs" (render "core_test.cljs" data)]
+                  ["src/{{nested-dirs}}.cljs"       (render "main.cljs" data)]
+                  ["test/{{nested-dirs}}_test.cljs" (render "main_test.cljs" data)]
                   ["resources/public/index.html"    (render "index.html" data)]
                   ["resources/public/style.css"     (render "style.css")])))
